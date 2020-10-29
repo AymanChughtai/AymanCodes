@@ -327,7 +327,7 @@ hr {
 
 }
 
-@media (max-width: 780px) {
+@media (max-width: 830px) {
 	
 	.icon {
 		font-size: 2.5rem;
@@ -342,7 +342,11 @@ hr {
 }
 
 
-@media (max-width: 550px) {
+@media (max-width: 680px) {
+
+	h1 {
+		font-size: 4.5rem;
+	}
 
 	h2 {
 		font-size: 2.5rem;
@@ -360,6 +364,17 @@ hr {
 		width:75%;
 	}
 
+	.topCloud {
+		height: 30px;
+	}
+
+	.bottomCloud {
+		position: absolute;
+		height: 30px;
+		left: 300px;
+		bottom: 200px;
+	}
+
 	.aymanImg {
 		width: 350px;
 	}
@@ -370,13 +385,7 @@ hr {
 	}
 
 	.skillText {
-		font-size: 0.7rem;
+		font-size: 0.5rem;
 	}
-
-	.bottomCloud {
-		position: absolute;
-		left: 300px;
-		bottom: 200px;
-	}
-
+	
 }
