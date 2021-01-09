@@ -357,6 +357,16 @@ hr {
 		font-size: 2.5rem;
 		padding: 10px;
 	}
+
+	.portImg {
+		flex-direction: column;
+		
+	}
+
+	.imagePort{
+		width: 50%;
+		
+	}
 	
 }
 
