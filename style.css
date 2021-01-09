@@ -13,17 +13,35 @@ body {
 	margin: 0;
 	text-align: center;
 	font-family: 'Merriweather', serif;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
+
 nav {
-	background-color: #112d4e;
-	margin-top: -110px;
-	padding: 5px 0 0 0;
+	height: 8vh;
+	background: #112d4e;
+}
+
+.navLinks { 
+	display: flex;
+	list-style: none;
+	width: 50%;
+	height: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-left: auto;
+}
+
+.navLinks li a {
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
 }
 
 .navLogo {
 	color: white;
-	margin: 0 40% 0 0;
+	margin-right: auto;
 	padding-bottom: 12px;
 }
 
@@ -32,28 +50,15 @@ nav {
 	padding: 2px;
 }
 
-ul {
-	display: flex;
-	justify-content: flex-end;
-	list-style-type: none;
-}
-
-li {
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	padding: 20px 25px 20px 25px;
-	font-family: 'Merriweather', serif;
-	font-size: 1.2rem;
-}
-
-li:hover {
-	color: #dbe2ef;
+a:hover {
+	text-decoration: underline;
 }
 
 a {
+	color: white;
 	text-decoration: none;
 }
+
 
 h1 {
 	margin: 50px auto 0 auto;
@@ -85,7 +90,7 @@ hr {
 
 .topContainer {
 	background-color: #dbe2ef;
-	padding-top: 100px;
+	margin-top: -17px;
 	position: relative;
 		
 }
@@ -94,10 +99,6 @@ hr {
 	padding-top: 65px;
 }
 
-/* .middleContainer {
-	background-color: #f9f7f7;
-	padding: 100px 0 100px 0;
-} */
 
 #about {
 	display: flex;
@@ -110,22 +111,24 @@ hr {
 	
 }
 
+
 .introText {
-	width: 35%;
+	width: 50%;
 	font-size: 1.15rem;
 	text-align: left;
+	color: #112d4e;
 }
 
 .topCloud {
 	position: absolute;
-	right: 300px;
-	top: 120px;
+	right: 20%;
+	top: 15%;
 }
 
 .bottomCloud {
 	position: absolute;
-	left: 300px;
-	bottom: 300px;
+	left: 20%;
+	bottom: 35%;
 }
 
 /* Tech Stack */
@@ -167,47 +170,22 @@ hr {
 /* Portfolio Section */
 
 #portfolio {
-	padding-bottom: 7%;
+	padding: 2% 0 9% 0;
 }
 
-.portfolioRow {
+.portImg {
 	display: flex;
-	justify-content: center;
 }
 
-#portfolio h3 {
-	color: black;
-	font-size: 1.75rem;
-}
-
-.portDescLeft {
-	text-align: left;
-	width: 40%;
-	margin-left: 25%;
-	font-size: 1.25rem;
-}
-
-.portDescRight {
-	text-align: left;
-	width: 40%;
-	margin-right: 25%;
-	font-size: 1.25rem;
-}
-
-.imageLeft {
-	width: 75%;
+.imagePort {
+	width: 83%;
 	box-shadow: 2px 30px 30px #b2b2b8;
 	transition: all 0.3s ease-in-out;
+	height:90%;
 }
 
-.imageRight {
-	width: 75%;
-	box-shadow: 2px 30px 30px #b2b2b8;
-	transition: all 0.3s ease-in-out;
-}
-
-#portfolio Img:hover {
-	width: 85%;
+.imagePort:hover {
+	box-shadow: 5px 45px 45px #b2b2b8;
 }
 
 .portImgOne {
@@ -284,13 +262,14 @@ hr {
 		flex-direction: column;	
 	}
 
-	.aymanImg {
-		margin: 0 auto;
+	.profileImg {
+		margin-right: 0px;
 	}
 
 	.introText {
 		width: 100%;
 		text-align: center;
+		
 	}
 
 	.icon {
@@ -327,17 +306,57 @@ hr {
 
 }
 
-@media (max-width: 830px) {
+@media (max-width: 930px) {
 	
-	.icon {
-		font-size: 2.5rem;
-		padding: 10px;
+
+	.line {
+		width: 30px;
+		height: 3px;
+		background: white;
+		margin: 5px;
+	}
+
+	nav {
+		position: relative;
+		background-color: #dbe2ef;
+		
+	}
+
+	.hamburger {
+		position: absolute;
+		cursor: pointer;
+		right: 5%;
+		top: 50%;
+		transform: translate(-5%, -50%); 
+		z-index: 2;
+	}
+
+	.navLinks {
+		position: sticky;
+		background: #112d4e;
+		height: 82vh;
+		width: 100%;
+		flex-direction: column;
+		clip-path: circle(100px at 90% -18%);
+		-webkit-clip-path: circle(100px at 90% -18%);
+		transition: all 1s ease-out;
+		
+	}
+
+	.navLinks.open {
+		clip-path: circle(1000px at 90% -18%);
+		-webkit-clip-path: circle(1000px at 90% -18%);
+		pointer-events: all;
 	}
 
 	.skillText {
 		font-size: 0.75rem;
 	}
 
+	.icon {
+		font-size: 2.5rem;
+		padding: 10px;
+	}
 	
 }
 
@@ -350,6 +369,10 @@ hr {
 
 	h2 {
 		font-size: 2.5rem;
+	}
+
+	.navLinks {
+		height: 65vh;
 	}
 
 	.navLi {
@@ -366,17 +389,18 @@ hr {
 
 	.topCloud {
 		height: 30px;
+		right: 10%
 	}
 
 	.bottomCloud {
-		position: absolute;
 		height: 30px;
-		left: 300px;
-		bottom: 200px;
+		bottom: 30%;
+		left: 10%;
+
 	}
 
 	.aymanImg {
-		width: 350px;
+		width: 80%;
 	}
 	
 	.icon {
@@ -386,7 +410,7 @@ hr {
 
 	.skillText {
 		font-size: 0.5rem;
-	}
+	} 
 
 	
 
