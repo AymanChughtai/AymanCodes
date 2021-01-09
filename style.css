@@ -177,25 +177,34 @@ hr {
 	display: flex;
 }
 
-.imagePort {
-	width: 83%;
+#portfolio img{
+	width: 85%;
 	box-shadow: 2px 30px 30px #b2b2b8;
 	transition: all 0.3s ease-in-out;
 	height:90%;
 }
 
-.imagePort:hover {
+#portfolio img:hover {
 	box-shadow: 5px 45px 45px #b2b2b8;
 }
 
-.portImgOne {
-	padding: 2% 5% 7% 5%;
-}
+
+
+/* Contact Section */
 
 #contactMe {
 	background-color: #dbe2ef;
 	padding: 10px 0 55px 0;
 }
+
+#contactMe h3 {
+	color: #112d4e;
+}
+
+#contactMe p {
+	color: #112d4e;
+}
+
 
 .contactMsg {
 	width: 45%;
@@ -281,30 +290,7 @@ hr {
 		font-size: 0.75rem;
 	}
 
-	.portfolioRow {
-		display: flex;
-		flex-direction: column;
-		
-	}
 
-	.portImgOne {
-		padding: 12% 0 5% 0;
-	}
-
-	.portDescLeft {
-		margin: 0 auto;
-		order: 1;
-		text-align: center;
-		width: 75%;
-	}
-
-	.portDescRight {
-		margin: 0 auto;
-		text-align: center;
-		width: 75%;
-	}
-
-}
 
 @media (max-width: 930px) {
 	
@@ -337,15 +323,15 @@ hr {
 		height: 82vh;
 		width: 100%;
 		flex-direction: column;
-		clip-path: circle(100px at 90% -18%);
-		-webkit-clip-path: circle(100px at 90% -18%);
+		clip-path: circle(100px at 90% -20%);
+		-webkit-clip-path: circle(100px at 90% -20%);
 		transition: all 1s ease-out;
 		
 	}
 
 	.navLinks.open {
-		clip-path: circle(1000px at 90% -18%);
-		-webkit-clip-path: circle(1000px at 90% -18%);
+		clip-path: circle(1000px at 90% -20%);
+		-webkit-clip-path: circle(1000px at 90% -20%);
 		pointer-events: all;
 	}
 
@@ -360,12 +346,19 @@ hr {
 
 	.portImg {
 		flex-direction: column;
-		
 	}
 
-	.imagePort{
+	#portfolio img {
 		width: 50%;
-		
+	}
+	.imagePortOne {
+		padding: 5% 0 5% 0;
+	}
+	.imagePortTwo {
+		padding: 5% 0 5% 0;
+	}
+	.imagePortThree {
+		padding: 5% 0 5% 0;
 	}
 	
 }
