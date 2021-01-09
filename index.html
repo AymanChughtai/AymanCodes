@@ -14,20 +14,18 @@
 </head>
 
 <body>
-
 	<div class="topContainer">
 		<nav>
-			<ul>
-				<h2 class="navLogo"><span class="spanLogo">AC</span></h2>
-				<a href="#about">
-					<li class="navLi">About</li>
-					<a href="#skillsContainer">
-						<li class="navLi">Skills</li>
-						<a href="#portfolio">
-							<li class="navLi">Portfolio</li>
-							<a href="#contactMe">
-								<li class="navLi">Contact</li>
-							</a>
+			<div class="hamburger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<ul class="navLinks">
+				<li class="navLi"><a class="navHover" href="#about">About</a></li>
+				<li class="navLi"><a class="navHover" href="#skillsContainer">Tech Stack</a></li>
+				<li class="navLi"><a class="navHover" href="#portfolio">Portfolio</a></li>
+				<li class="navLi"><a class="navHover" href="#contactMe">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="main">
@@ -62,7 +60,6 @@
 					<i class="icon devicon-html5-plain"></i></i>
 				<h3 class="skillText">HTML5</h3>
 			</div>
-
 			<div class="skillRow">
 				<i class="icon">
 					<i class="icon devicon-css3-plain"></i></i>
@@ -114,55 +111,20 @@
 		</div>
 	</div>
 
-
 	<div id="portfolio">
 		<h2>Portfolio</h2>
-		<div class="portfolioRow">
-			<div class="portImgOne">
-				<a href="https://aymanchughtai.github.io/DogBud/">
-					<img class="imageLeft" src="assets/dogBud.png" alt="">
-				</a>
-			</div>
-			<div class="portDescRight">
-				<h3>DogBud</h3>
-				<p>A website created for dogs looking for their best bud. This website is fully responsive and was built
-					using HTML, CSS and Bootstrap.</p>
-				<p>Click on the Image to view it Live!</p>
-			</div>
+		<div class="portImg">
+			<a href="https://aymanchughtai.github.io/DogBud/">
+				<img class="imagePort" src="assets/dogBud.png" alt="">
+			</a>
+			<a href="https://aymanchughtai.github.io/MarvelFinder/">
+				<img class="imagePort" src="assets/marvel.png" alt="">
+			</a>
+			<a href="https://aymanchughtai.github.io/JewelHubStore/">
+				<img class="imagePort" src="assets/jewel.png" alt="">
+			</a>
 		</div>
-
-		<div class="portfolioRow">
-			<div class="portDescLeft">
-				<h3>Marvel Hero Finder</h3>
-				<p>An app created for finding out more about your favourite Marvel Hero. This was built using HTML, CSS,
-					jQuery, and REST API.</p>
-				<p>Click on the Image to view it Live!</p>
-			</div>
-			<div class="portImgOne">
-				<a href="https://aymanchughtai.github.io/MarvelFinder/">
-					<img class="imageRight" src="assets/marvel.png" alt="">
-				</a>
-			</div>
-
-		</div>
-		<div class="portfolioRow">
-			<div class="portImgOne">
-				<a href="https://aymanchughtai.github.io/JewelHubStore/">
-					<img class="imageLeft" src="assets/jewel.png" alt="">
-				</a>
-			</div>
-			<div class="portDescRight">
-				<h3>Jewel Hub Store</h3>
-				<p>A PSD conversion for a Jewellery store. This website is fully responsive and was built
-					using HTML and CSS.</p>
-				<p>Click on the Image to view it Live!</p>
-			</div>
-		</div>
-
-
 	</div>
-
-
 
 	<div id="contactMe">
 		<h2>Contact Me</h2>
@@ -181,7 +143,17 @@
 					class="fab fa-github"></i></i></a>
 		<p class="copyright">© 2020 Ayman Chughtai</p>
 	</div>
+	</div>
 
+	<script>
+		const hamburger = document.querySelector('.hamburger');
+		const navLinks = document.querySelector(".navLinks");
+		const links = document.querySelectorAll(".navLinks li");
+
+		hamburger.addEventListener("click", () => {
+			navLinks.classList.toggle("open");
+		});
+	</script>
 </body>
 
 </html>
